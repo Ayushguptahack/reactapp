@@ -1,0 +1,612 @@
+@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@800&display=swap');
+
+.parent{
+  perspective:1000px;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: rgb(66, 59, 59);
+  display: flex;
+  flex-direction: column;
+}
+
+.nav{
+  position: absolute;
+  min-width: 100vw;
+  min-height: 15vh;
+  background-color: rgb(42, 40, 40);
+  display: flex;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.rendercomp{
+  min-width: 100vw;
+  min-height: 83.5vh;
+  position: relative;
+  transition-duration: 1.5s;
+  transition-timing-function: ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo{
+  min-width: 30vw;
+  min-height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img{
+  width: 150px;
+  height : 100px;
+}
+
+.links{
+  min-width: 70vw;
+  min-height: 15vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  
+}
+
+.selected{
+  color :rgb(253, 158, 34);
+}
+
+.links a{
+  text-decoration: none;
+  font-size: large;
+  font-weight: 750;
+  color: white;
+}
+.links a:hover{
+  color: white;
+}
+
+.content{
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 2s;
+  transition-timing-function: ease-in-out;
+}
+
+.shadow{
+  min-width: 100vw;
+  min-height: 100vh;
+  position: absolute;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 1;
+}
+
+.titles{
+  min-width: 80vw;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  z-index: 2;
+}
+
+.titlerender{
+  min-width: 80vw;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.heading{
+  color: white;
+}
+
+.heading h2{
+  font-size: 2rem;
+  font-weight: 800;
+  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.5);
+}
+
+.titles div h1{
+  color: rgb(253, 158, 34);
+  font-size: 2.5rem;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+  font-family: 'Eczar', serif;
+}
+
+.submitbtn{
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  background-color: transparent;
+  outline: none;
+  transition: .8s;
+  font-weight: 900;
+  font-size: 20px;
+  border: 2px solid white;
+  text-decoration: none;
+}
+
+.submitbtn:hover{
+  color:white;
+  border: 2px solid rgb(253, 158, 34);
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+  background-color: rgb(253, 158, 34);
+  box-shadow: 2px 2px 5px rgb(253, 158, 34),
+  -2px 2px 5px rgb(253, 158, 34),
+  2px -2px 5px rgb(253, 158, 34),
+  -2px -2px 5px rgb(253, 158, 34);
+}
+
+.aboutimgdiv{
+  min-width: 100vw;
+  min-height: 70vh;
+  background: url("../public/MonumentsImages/background.jpg");
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+  text-align: left;
+}
+
+.aboutimgdiv h1{
+  padding-left: 5rem;
+  font-size: 3rem;
+}
+
+.aboutimgdiv h3{
+  padding-left: 5rem;
+  font-size: 1.5rem;
+}
+
+.empty{
+  min-width: 100vw;
+  min-height: 30vh;
+  background-color: rgb(195, 191, 191);
+}
+
+.aboutcardscontainer{
+  position: absolute;
+  min-width: 84vw;
+  min-height: 45vh;
+  background-color: transparent;
+  top : 50%;
+  left: 8%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cards{
+  min-width: 18vw;
+  max-height: 45vh;
+  background-color: rgb(239, 231, 231);
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+}
+
+.imgcontainer{
+  min-width: 18vw;
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgdiv{
+  min-width: 75px;
+  min-height: 75px;
+  background-color: rgb(253, 168, 42);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  border-radius: 50%;
+}
+
+  .textcontent{
+    min-width: 18vw;
+    min-height: 25vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .textcontent div{
+    max-width: 18vw;
+    text-align: center;
+  }
+
+  .textcontent div p{
+    color: gray;
+    padding-top: 1rem;
+  }
+
+
+  .contactuscontainer{
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: rgb(16, 2, 27);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .circle1{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    min-width: 250px;
+    min-height: 250px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom right,orange,red);
+  }
+
+  .circle2{
+    position: absolute;
+    bottom: 20%;
+    right: 20%;
+    min-width: 200px;
+    min-height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom right,rgb(0, 234, 255),rgb(102, 0, 255));
+  }
+
+  .contactusform{
+    margin-top: 3rem !important;
+    min-width: 50vw;
+    border-radius: 10px;
+    min-height: 70vh;
+    background-color: rgba(103, 98, 98, 0.3);
+    backdrop-filter: blur(5px);
+    z-index: 1;
+  }
+
+  .contactusform form{
+    min-width: 50vw;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contactusform form div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    position: relative;
+  }
+
+  .contactusform form input{
+    min-width: 40vw;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid white;
+    color: white;
+    padding-bottom: 5px;
+  }
+
+  .contactusform form textarea{
+    min-width: 40vw;
+    min-height: 20vh;
+    text-decoration: none;
+    outline: none;
+    background: transparent;
+    border: none;
+    border: 2px solid white;
+    resize: none;
+    color: white;
+    padding: 5px;
+  }
+
+  ::placeholder{
+    color: white;
+  }
+
+
+  .contactusform form button{
+    padding: 10px 20px;
+    background: transparent;
+    border: 2px solid rgb(253, 158, 34);
+    color: rgb(253, 158, 34);
+    border-radius: 10px;
+    font-weight: 600;
+    transition: .2s;
+  }
+
+  .contactusform form button:hover{
+    color: white;
+    background: rgb(253, 158, 34);
+    box-shadow: 2px 2px 5px rgb(253, 158, 34),
+    -2px -2px 5px rgb(253, 158, 34),
+    2px -2px 5px rgb(253, 158, 34),
+    -2px 2px 5px rgb(253, 158, 34);
+  }
+
+  #alertbox{
+    position: absolute;
+    min-width: 40vw;
+    min-height: 100vh;
+    right:0;
+    background-color: white;
+    z-index: 3;
+    background-color: transparent;
+  }
+
+  .toastcontainer{
+    position: absolute;
+    top : 20vh;
+    right : 0;
+    min-width: 25vw;
+    min-height: 60vh;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Toastify{
+    max-width: 25vw;
+    min-height: 1vh;
+    overflow: hidden;
+  }
+
+  .Toastify__toast-container{
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+  }
+
+  .galleryparent{
+    perspective: 1000px;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gallerycardscontainer{
+    max-width: 80vw;
+    min-height: 60vh;
+    position: absolute;
+    top: 35vh;
+    left: 10vw;
+    display: flex;
+    justify-content: space-around;
+    perspective: 1000px;
+    border-radius: 10px;
+  }
+
+  .gd1{
+    min-width: 100vw;
+    min-height: 100vh;
+    background-image: url("../public/GalleryImages/bg1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+ 
+
+  .galleryheading{
+    position: absolute;
+    top:20vh;
+    right : 25vw;
+    z-index: 3;
+    font-size: xxx-large;
+    color: white;
+    text-shadow: 5px 5px 3px rgba(0, 0, 0, .5);
+  }
+
+  .gallerycard{
+    flex: 1;
+    max-height: 60vh;
+    transition: 700ms;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-origin: center;
+    overflow: hidden;    
+  }
+
+  .gallerycard:hover{
+    flex: 100%;
+    transform: translateZ(100px);
+    z-index: 2;
+    border-radius: 10px;
+  }
+
+  .gallerycontent h1,.gallerycontent p{
+    color: white;
+    padding-top: 5vh;
+    padding-left: 10vw;
+    transition: 800ms;
+    text-shadow: 4px 4px 5px rgba(0, 0, 0, .5);
+    transform: translateX(-250%);
+    max-width: 40vw;
+    max-height: 60vh;
+  }
+
+  .gallerycard:hover .gallerycontent h1{
+    transition-delay: 500ms;
+    transform: translateX(0) scale(1.2);
+  }
+
+  .gallerycard:hover .gallerycontent p{
+    font-weight: 500;
+    transition-delay: 700ms;
+    transform: translateX(0) scale(1.2);
+  }
+
+
+  .signparent{
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .signimgcont{
+    min-width: 55%;
+    min-height: 100%;
+    background-image: url("../public/GalleryImages/shiva.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .signimg{
+    position: absolute;
+    min-width: 35%;
+    min-height: 32%;
+    background-image: url("../public/GalleryImages/namaste.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: invert(1);
+  }
+
+  .signformcont{
+    position: relative;
+    min-width: 45%;
+    min-height: 100%;
+    background: linear-gradient(to bottom right,rgb(29, 225, 143),rgb(33, 73, 232));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .parentformcont{
+    max-width: 80%;
+    min-height: 60%;
+    display: flex;
+    flex-direction: row;
+    transition: 1s;
+    overflow: hidden;
+  }
+
+ .formcont{
+  min-width: 200%;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, .2);
+  backdrop-filter: blur(2px);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  transition: 1s;
+ }
+
+ .form1{
+  min-width: 50%;
+  min-height: 100%;
+ }
+
+ .form1 div{
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+ .form2 div{
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+ .form1 form{
+  min-width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+ }
+
+ .form2{
+  min-width: 50%;
+  min-height: 100%;
+ }
+
+ .form2 form{
+  min-width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 5px;
+ }
+
+ .form1 input{
+  min-width: 80%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px white solid;
+  outline: none;
+  color: white;
+  font-size: 15px;
+ }
+
+ .form2 input{
+  min-width: 80%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px white solid;
+  outline: none;
+  color: white;
+  font-size: 15px;
+ }
+
+ .form1 button{
+  padding: 10px;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 2px solid white;
+  color: white;
+  transition: 200ms;
+ }
+
+ .form2 button{
+  padding: 10px;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 2px solid white;
+  color: white;
+  transition: 200ms;
+ }
+
+ .form1 a{
+  color: white;
+ }
+
+ .form2 a{
+  color: white;
+ }
+
+ .formcont button:hover{
+    color: white;
+    border: 2px solid rgb(145, 18, 213);
+    background: rgb(145, 18, 213);
+    box-shadow: 2px 2px 5px rgb(145, 18, 213),
+    -2px -2px 5px rgb(145, 18, 213),
+    2px -2px 5px rgb(145, 18, 213),
+    -2px 2px 5px rgb(145, 18, 213);
+ }
